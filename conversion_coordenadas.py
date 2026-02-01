@@ -35,6 +35,7 @@ def main():
         print(f"Latitud: {lat_dms[0]}° {lat_dms[1]}' {lat_dms[2]:.4f}\" {lat_dir}")
         print(f"Longitud: {lon_dms[0]}° {lon_dms[1]}' {lon_dms[2]:.4f}\" {lon_dir}")
 
+    
     elif option == "2":
         print("\n--- DATOS DE LATITUD ---")
         lat_g = int(input("Grados: "))
