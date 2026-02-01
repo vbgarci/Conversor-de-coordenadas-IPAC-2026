@@ -1,12 +1,24 @@
 def dd_to_dms(dd):
+    #se usa valores enteros para hacer calculos limpios
+    dd_bsa = bsa(dd)
     grados = int(dd)
     minutos = int((dd - grados) * 60)
     segundos = (dd - grados - minutos / 60) * 3600
     return grados, minutos, segundos
 
 def dms_to_dd(grados, minutos, segundos):
-    return grados + minutos / 60 + segundos / 3600
+    dd = grados + minutos / 60 + segundos / 3600
+    if direccion.upper() in ["S", "W", "O"]:
+        dd = dd * -1
+    return dd
 
+def main ():
+    print ("=" * 52) 
+    print ("Bienvenidos a la calculadora de coordenadas")
+    print (" conversor de coordenadas")
+    print ("=" * 52)
+ 
+    
 def main():
     print("Conversión de coordenadas")
     print("1. Grados decimales a grados, minutos y segundos")
