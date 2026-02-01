@@ -36,21 +36,30 @@ def main():
         print(f"Longitud: {lon_dms[0]}° {lon_dms[1]}' {lon_dms[2]:.4f}\" {lon_dir}")
 
     elif option == "2":
-        lat_grados = int(input("Ingrese la latitud en grados: "))
-        lat_minutos = int(input("Ingrese los minutos de la latitud: "))
-        lat_segundos = float(input("Ingrese los segundos de la latitud: "))
-        lat_dir = input("Ingrese la dirección de la latitud (N/S): ").upper()
-        lon_grados = int(input("Ingrese la longitud en grados: "))
-        lon_minutos = int(input("Ingrese los minutos de la longitud: "))
-        lon_segundos = float(input("Ingrese los segundos de la longitud: "))
-        lon_dir = input("Ingrese la dirección de la longitud (E/W): ").upper()
-        lat_dd = dms_to_dd(lat_grados, lat_minutos, lat_segundos, lat_dir)
-        lon_dd = dms_to_dd(lon_grados, lon_minutos, lon_segundos, lon_dir)
-        print(f"Latitud: {lat_dd:.6f}° {lat_dir}")
-        print(f"Longitud: {lon_dd:.6f}° {lon_dir}") 
+        print("\n--- DATOS DE LATITUD ---")
+        lat_g = int(input("Grados: "))
+        lat_m = int(input("Minutos: "))
+        lat_s = float(input("Segundos: "))
+        lat_d = input("Dirección (N/S): ")
+
+        print("\n--- DATOS DE LONGITUD ---")
+        lon_g = int(input("Grados: "))
+        lon_m = int(input("Minutos: "))
+        lon_s = float(input("Segundos: "))
+        lon_d = input("Dirección (E/W): ")
+
+        lat_final = dms_to_dd(lat_g, lat_m, lat_s, lat_d)
+        lon_final = dms_to_dd(lon_g, lon_m, lon_s, lon_d)
+
+        print(f"\n✅ RESULTADO DECIMAL:")
+        print(f"📍 Latitud:  {lat_final:.6f}°")
+        print(f"📍 Longitud: {lon_final:.6f}°")
 
     else:
-        print("Opción no válida")
+        print("\n❌ Opción no válida. Intente de nuevo.")
 
 if __name__ == "__main__":
     main()
+
+   
+    
