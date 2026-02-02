@@ -53,11 +53,11 @@ def main():
         lon_final = dms_to_dd(lon_g, lon_m, lon_s, lon_d)
 
         print(f"\n✅ RESULTADO DECIMAL:")
-        print(f"📍 Latitud:  {lat_final:.6f}°")
-        print(f"📍 Longitud: {lon_final:.6f}°")
+        print(f" Latitud:  {lat_final:.6f}°")
+        print(f" Longitud: {lon_final:.6f}°")
 
     else:
-        print("\n❌ Opción no válida. Intente de nuevo.")
+        print("\n Opción no válida. Intente de nuevo.")
 
 if __name__ == "__main__":
     main()
